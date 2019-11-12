@@ -58,4 +58,140 @@
     ['english', 'german', 'math', 'chinese']
     ```
   
-  - 
+  - 删除list末尾的元素：
+  
+    ```python
+    >>> classNames.pop()
+    'chinese'
+    ```
+  
+  - 删除指定位置的元素：
+  
+    ```python
+    >>> classNames.pop(0)
+    'english'
+    ```
+  
+  - 替换元素：
+  
+    ```python
+    >>> classNames[0] = 'chinese'
+    ```
+  
+  - list里面元素类型可以不相同
+  
+  - list元素也可以是另一个list
+  
+  - tuple：有序列表，tuple一旦初始化不能修改，和list非常类似
+  
+    - 定义一个空的tuple， t = ()
+    - 当tuple中有一个数的时候，可以自己定义 t = (1,)来消除歧义
+  
+  - 条件判断：
+  
+    - if判断
+  
+      - 语法结构： 
+  
+        ```python
+        >>> if a > 18:
+        		print('yes')
+            elif a < 15:
+                print('yes')
+            else:
+                print('no')
+        ```
+  
+        当if 的条件为True时进去到分支中，否则的话进入到elif分支，最后进入到else分支
+  
+  - 循环：
+  
+    python循环判断有两种方式：
+  
+    - 1.for ... in 循环：
+  
+      ```python
+      >>> a = ['1','2','3','4','5']
+      >>> for x in a:
+      	print(x)
+      
+      	
+      1
+      2
+      3
+      4
+      5
+      ```
+  
+    - 2.while循环：
+  
+      ```python
+      >>> sum = 0
+      >>> n = 0
+      >>> while n < 5:
+      	sum = sum + n
+      	n = n + 1
+      
+      	
+      >>> sum
+      10
+      ```
+  
+  - dict字典类型：
+  
+    使用的是key -value类型存储，格式为 {key: value}
+  
+    ```python
+    >>> d = {'sum':10}
+    >>> d['sum']
+    10
+    ```
+  
+  - dict常用方法：
+  
+    - get（）
+  
+      ```python
+      >>> d.get('num')
+      >>> d.get('num', 1)
+      1
+      ```
+  
+      当get方法没有获取到数据的时候，返回的是None，也可以指定默认值，当没有查询到数据时返回默认值
+  
+  - set类型：
+  
+    set和dict类型，是一组key的集合，不能包含重复的数据。
+  
+    - 初始化方式： 
+  
+      ```python
+      >>> s = set([1,2,3])
+      >>> s
+      {1, 2, 3}
+      ```
+  
+    - set的常用方法：
+  
+      - add：add(key)
+  
+        ```python
+        >>> s.add(4)
+        >>> s
+        {1, 2, 3, 4}
+        >>> s.add(4)
+        >>> s
+        {1, 2, 3, 4}
+        ```
+  
+        当添加了重复数据的时候会自动过滤掉
+  
+      - remove：remove(key)
+  
+        ```python
+        >>> s.remove(1)
+        >>> s
+        {2, 3, 4}
+        ```
+  
+        删除set中指定的值
